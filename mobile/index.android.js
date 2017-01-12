@@ -36,7 +36,20 @@ export default class AccuCamp extends Component {
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
           }}
-        />
+        >
+          <MapView.Polyline
+            coordinates={[
+              {
+                latitude: 40.8654,
+                longitude: -74.1823
+              },
+              {
+                latitude: 40.7572,
+                longitude: -73.9908
+              }
+            ]}
+          />
+        </MapView>
       </View>
     );
   }
