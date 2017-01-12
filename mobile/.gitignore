@@ -51,3 +51,8 @@ android/app/libs
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
+
+# Ignore AndroidManifest.xml because it is generated:
+# Google API Key needs to be added to the manifest.
+android/app/src/main/AndroidManifest.xml
+android/app/src/main/GoogleApiKey.txt

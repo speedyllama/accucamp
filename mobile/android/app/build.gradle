@@ -137,3 +137,17 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+
+// Add Google API key to Android Manifest file
+task addGoogleApiKeyToManifest << {
+    String androidManifestPath = 'src/main/AndroidManifest.xml';
+    String androidManifestPathOrig = androidManifestPath + '.orig'
+    String googleApiKey = new File('src/main/GoogleApiKey.txt').getText('UTF-8').trim()
+    String androidManifest = new File(androidManifestPathOrig).getText('UTF-8')
+    androidManifest = androidManifest.replaceAll('\\$GOOGLE_API_KEY', googleApiKey)
+    new File(androidManifestPath).write(androidManifest, 'UTF-8')
+}
+
+preBuild.dependsOn {
+    addGoogleApiKeyToManifest
+}

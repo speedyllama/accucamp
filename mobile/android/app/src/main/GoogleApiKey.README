@@ -1,0 +1,2 @@
+Place your Google API key to GoogleApiKey.txt in this folder.
+It will be picked up by the custom Gradle task "addGoogleApiKeyToManifest".
