@@ -31,8 +31,8 @@ export default class AccuCamp extends Component {
         <MapView
           style={styles.map}
           initialRegion={{
-            latitude: 37.78825,
-            longitude: -122.4324,
+            latitude: 40.7572,
+            longitude: -73.9908,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
           }}
